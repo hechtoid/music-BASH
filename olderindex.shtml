@@ -1,0 +1,152 @@
+<!DOCTYPE shtml><head><title>music!</title>
+<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+<style>
+table {
+border-radius: 69px;
+padding: 3px; 
+width:700px; 
+height:420px; 
+border:5px solid; 
+font-size:27px;
+font-weight:bold;
+margin-left:14px;
+}
+button {
+border-radius: 11px;
+margin-top:11px;
+margin-left:11px;
+border-width:11px;
+}
+th {
+text-align: center;
+}
+h4 {
+padding:23px;
+line-height:36px;
+font-size:18px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<scrip src="jquery.fastLiveFilter.js"></script>
+<script>
+$(document).ready(function(){
+    $("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val();
+ 
+        // Loop through the comment list
+        $(".musiclist li").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+               $(this).fadeOut();
+ 
+            }
+        });
+    });
+});
+</script>
+
+<script>
+function findRule() {
+	var query_string = $('#search_string').val();
+	var q = query_string.replace(/\s+/gm, '').split('+');
+	var regex = new Array();
+	for (var i = 0; i < q.length; i++) {
+		regex[i] = new RegExp(q[i], 'mi');
+	}
+	$("#music_list li").each(function() {
+		var show = true;
+		for (var i = 0; i < regex.length; i++) {
+			if (!regex[i].test($(this).html())) {
+				show = false;
+				break;
+			}
+		}
+		$(this).toggle(show);
+	});
+	$('.before_rules').toggle(query_string.length == 0);
+}
+
+$(document).ready(function() {
+		var original_value = $('#search_string').val();
+		$('#search_string').keyup(findRule);
+		$('#search_string').focus(function() {
+			if ($(this).val() == original_value) {
+				$(this).val('');
+			}
+		});
+		$('#search_string').blur(function() {
+			if ($(this).val() == '') {
+				$(this).val(original_value);
+				$('.before_rules').show();
+			}
+		})
+});
+</script>
+<script>
+    $(function() {
+        $('#search_input').fastLiveFilter('#musiclist');
+    });
+</script>
+
+</head>
+
+<body>
+<br>
+<h3>Listen Live:</h3> <audio style="width:420px; border-radius:5px;"autoplay="autoplay" controls>
+<source src="http://98.248.174.243:8000/mpd" type="audio/mpeg">
+</audio>
+
+<br>
+<table>
+<tr>
+<td><button onClick="parent.location='/cgi-bin/play.cgi'" ><h2><font color ="#009900"> PLAY </font></h2></button></td>
+<td><button style="height:200px;" onClick="parent.location='/cgi-bin/mpcstop.cgi'"><h1 style="font-size:55px;"><font color="#FF0000">STOP</font></h1></button></td>
+
+<td><button onClick="parent.location='/cgi-bin/next.cgi'"><h2><font color ="#884411"> NEXT! </font></h2></button></td>
+</tr><tr>
+<td><button onClick="parent.location='/cgi-bin/crop.cgi'"><h2><font color ="#880088"> crop </font></h2></button></td>
+
+<td><button onClick="parent.location='/cgi-bin/stopsoon.cgi'"><h2><font color ="#EE9922">stop...soon</font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/cdprev.cgi'"><h2><font color ="#3CF">choh it back</font></h2></button></td>
+</tr>
+
+<tr>
+<td></td>
+<td><a href=/../cgi-bin/mpc%20hella.cgi>full status</a></td>
+<td><a href=/../cgi-bin/update%20another.cgi>another update</a></td>
+</tr>
+<!--<td><a href=/../cgi-bin/freshfifteen.cgi>The Freshest Fifteen</a></td>
+<td><a href=/../cgi-bin/freshfolder.cgi>Just One</a></td>
+-->
+</table>
+<br><iframe src="/cgi-bin/nowplaying.cgi"style="border:3px solid green; margin:14px;padding:3px;border-radius:11px;width:999px;">nowplayinginfo</iframe><br>
+<iframe src="/cgi-bin/mpcqueue.cgi"style="border:3px solid green; margin-left:1111px; margin-top:-666px;padding:3px;border-radius:11px;width:423px;height:690px;"></iframe>
+<br>
+
+<h2>
+<FORM ACTION="/cgi-bin/addvalue.cgi">
+<P>ENTER URL : <INPUT NAME="value">&nbsp;<INPUT TYPE="SUBMIT" VALUE="feed">
+</FORM>
+</h2>
+<hr>
+freshest first:
+<form id="live-search" action="" class="styled" method="post">
+        <input type="text" class="text-input" id="filter" value="" />
+</form>
+<form class="search_form" name="rules" onsubmit="return false" action="">
+		<input type="text" id="search_string" value="Filter (empty to reset)" />
+</form>
+<div class="before_rules">|</div>
+<div class="music_list">
+<div id="before_rules">
+MUSIC:
+<input id="search_input" placeholder="Type to filter">
+
+<!--#include virtual="/cgi-bin/freshamusic.cgi" --> 
+
+
+</body>

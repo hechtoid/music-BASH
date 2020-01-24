@@ -1,0 +1,19 @@
+<!DOCTYPE html> <head><meta http-equiv="Content-Type" content="text/html\; charset=utf-8" /><title>momusic</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="jquery.fastLiveFilter.js"></script>
+<script>
+    $(function() {
+        $('#search_input').fastLiveFilter('#musiclist');
+    });
+</script>
+</head>
+<body>
+
+<b><h2 style=":15px;font-family:sans;"><a href="/cgi-bin/mpcqueue.cgi">SmartQ</a>&emsp;&emsp;<a href="/www/music/mumusic.shtml">NewMusic</a>&emsp;&emsp;HellaMusic&emsp;&emsp;<a href="/cgi-bin/mpchella.cgi">FullQ</a></h2></b>
+<br><br>
+<input id="search_input" placeholder="Live filter (empty to reset)">
+
+<!--#include virtual="/cgi-bin/freshomusic.cgi" -->
+
+
+</body>

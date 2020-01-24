@@ -1,0 +1,14 @@
+<!DOCTYPE html> <head><meta http-equiv="Content-Type" content="text/html\; charset=utf-8" /><title>new musics!</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="jquery.fastLiveFilter.js"></script>
+./freshamusic.cgi: command substitution: line 14: syntax error near unexpected token `('
+./freshamusic.cgi: command substitution: line 14: `function() {'
+</head><body>
+<b><h2 style=":15px;font-family:sans;"><a href="mpcqueue.cgi">SmartQ</a>&emsp;&emsp;NewMusic&emsp;&emsp;<a href="/www/music/mom
+usic.html">HellaMusic</a>&emsp;&emsp;<a href="mpchella.cgi">FullQ</a></h2></b>
+<input id="search_input" placeholder="Live filter (empty to reset)">
+
+
+<!--#include virtual="/cgi-bin/freshamusic.cgi" --> 
+
+</body>

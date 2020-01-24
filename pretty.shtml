@@ -1,0 +1,36 @@
+<!DOCTYPE shtml><head><title>music!</title>
+<link type="text/css" rel="stylesheet" href="prettystylesheet.css" /> 
+<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+</head>
+
+<body>
+<br><iframe class="nowplaying"src="nowplaying.shtml">nowplayinginfo</iframe>
+<table>
+<tr><td>
+<a href="/cgi-bin/flacstreamer.cgi" target="_blank">
+<div class="flacstream">
+<br><br>
+<font class="flacstream"color="#119988">FLACSTREAM</font>
+</a>
+<br><br><br><br><br><br><br>
+<a href="/cgi-bin/mp3streamer.cgi" target="_blank">
+<font class="flacstream"color="#55DDCC">mp3stream</font></a>
+</td>
+<br><br>
+<td><button class="stopbutton" onClick="parent.location='/cgi-bin/mpcstop.cgi'"><h1 style="font-size:55px;"><font color="#FF0000"> STOP </font></h1></button></td>
+<td><button class="stopbutton" onClick="parent.location='/cgi-bin/play.cgi'" ><h2 style="font-size:42px;"><font color ="#009900"> play </font></h2></button></td>
+<br></div></td><td></td></tr></table>
+<br>
+<table class="table">
+<tr>
+<td><button onClick="parent.location='/cgi-bin/cdprev.cgi'"><h2><font color ="#37C">CDPrev <b>|<</b></font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/crop.cgi'"><h2><font color ="#808"> crop </font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/stopsoon.cgi'"><h2><font color ="#B93">Stop(soon)</font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/next.cgi'"><h2><font color ="#E62"> NEXT!<b> >>></b></font></h2></button></td>
+</tr>
+</table>
+<br>
+<iframe class="multi" src="/cgi-bin/mpcQpretty.cgi"></iframe>
+
+</body>
+

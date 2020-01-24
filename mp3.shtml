@@ -1,0 +1,6 @@
+<!DOCTYPE shtml><head><title>mp3</title>
+<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+</head>
+<body>
+<td><button onClick="parent.location='/cgi-bin/mp3streamer.cgi'"><h2><font color ="#37C">mp3</font></h2></button></td>
+</body>

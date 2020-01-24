@@ -1,0 +1,65 @@
+.multi{
+width:920px;
+height:2000px;
+margin-left:1px;
+}
+.table {
+border-radius: 23px;
+padding: 3px; 
+width:950px; 
+height:120px; 
+border:5px solid; 
+font-size:27px;
+font-weight:bold;
+margin-left:14px;
+}
+button {
+border-radius: 11px;
+margin-top:11px;
+margin-left:11px;
+border-width:11px;
+}
+th {
+text-align: center;
+}
+h4 {
+padding:23px;
+line-height:36px;
+font-size:18px;
+}
+h2{
+font-size:25px;
+}
+h1{
+font-size:35px;
+}
+.nowplaying{
+border:3px solid green; 
+margin:5px;
+padding:3px;
+border-radius:11px;
+width:950px;
+}
+
+.flacstream{
+margin-left:25px;
+margin-right:25px;
+border:5px solid;
+border-width:5px;
+border-radius:23px;
+width:500px;
+height:222px;
+text-align:center;
+vertical-align:middle;
+line-height:50px;
+padding:23px;
+font-size:55px;
+}
+a {
+text-decoration: none;
+}
+.stopbutton{
+margin-right:25px;
+height:250px;
+width:225px;
+}

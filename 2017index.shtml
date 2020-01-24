@@ -1,0 +1,68 @@
+<!DOCTYPE shtml><head><title>music!</title>
+<script type="text/javascript" src="detect-browser.js"></script>
+	<script>
+			if (isMobile()) {
+
+	document.write ('<link type="text/css" rel="stylesheet" href="mobilestylesheet.css"/> ')
+}
+			else {
+	document.write ('<link type="text/css" rel="stylesheet" href="compustylesheet.css" /> ');
+}
+</script>
+<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+</head>
+
+<body>
+WHAT IF IT ONLY TOLD YOU ALBUMS AT FIRST
+<br><iframe class="nowplaying"src="nowplaying.shtml">nowplayinginfo</iframe><br>
+<br>
+<span>
+<!--<a href="/cgi-bin/whatartist.cgi" target="_blank">¿whatartist? </a><a href="/cgi-bin/whatalbum.cgi" target="_blank"> ¿whatalbum? </a>-->
+<a href="/cgi-bin/whosampled.cgi">¿whosampled?</a></span> <a href="/cgi-bin/lyrics.cgi">Search Lyrics</a><a href="/cgi-bin/freshaamusic.cgi">whaat</a>
+<br>
+<br>
+FLAC: <audio controls>
+<source src="http://108.65.196.133:8001" type="audio/flac"><p>flac</p>
+</audio>
+mp3: <audio controls>
+<source src="http://108.65.196.133:8002" type="audio/mp3"><p>mp3</p>
+</audio>
+<!--<a href="/cgi-bin/speak.cgi">SPEAK</a>-->
+
+<table>
+<tr><td>
+<a href="/cgi-bin/flacstreamer.cgi">
+<div class="flacstream">
+<br>
+<font class="flacstream"color="#44CCBB">FLAC</font>
+
+<br><br>
+<td><button class="stopbutton" onClick="parent.location='/cgi-bin/mpcstop.cgi'"><h1 style="font-size:55px;"><font color="#FF0000"> STOP </font></h1></button></td>
+
+<br></div></a></td><td></td></tr></table>
+<br>
+<table class="table">
+<tr>
+<td><button onClick="parent.location='/cgi-bin/cdprev.cgi'"><h2><font color ="#37C">CDPrev</font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/play.cgi'" ><h2><font color ="#009900"> Play </font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/crop.cgi'"><h2><font color ="#880088"> crop </font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/next.cgi'"><h2><font color ="#884411"> NEXT! </font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/stopsoon.cgi'"><h2><font color ="#EE9922">Stop(soon)</font></h2></button></td>
+
+</tr>
+
+<!--<td><a href=/../cgi-bin/update%20another.cgi><h2>another update</h2></a></td>-->
+
+</table>
+<br>
+<script>
+			if (isMobile()) {
+		document.write('<iframe class="multi" src="/cgi-bin/mopcqueue.cgi">')
+}
+			else {
+	document.write ('<iframe class="multi" src="/cgi-bin/mpcqueue.cgi">')
+}
+</script>"
+
+</body>
+

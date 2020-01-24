@@ -1,0 +1,69 @@
+<!DOCTYPE shtml><head><title>music!</title>
+<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+<style>
+.table {
+border-radius: 69px;
+padding: 3px; 
+width:500px; 
+height:250px; 
+border:5px solid; 
+font-size:27px;
+font-weight:bold;
+margin-left:14px;
+}
+button {
+border-radius: 11px;
+margin-top:11px;
+margin-left:11px;
+border-width:11px;
+}
+th {
+text-align: center;
+}
+h4 {
+padding:23px;
+line-height:36px;
+font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+<br><iframe src="/cgi-bin/nowplaying.cgi"style="border:3px solid green; margin:5px;padding:3px;border-radius:11px;width:500px;">nowplayinginfo</iframe><br>
+<br>
+<table>
+<tr><td>
+<a href="/cgi-bin/flacstreamer.cgi">
+<div style="margin-left:25px;margin-right:25px;border:5px solid;border-width:5px;border-radius:23px;width:250px;height:111px;text-align:center;vertical-align:middle;line-height:25px;">
+<br>
+<font style="padding:23px;font-size:23px;"color="#44CCBB">FLACSTREAM</font>
+<br><br>
+<td><button style="margin-right:25px;height:150px;width:225px;" onClick="parent.location='/cgi-bin/mpcstop.cgi'"><h1 style="font-size:55px;"><font color="#FF0000"> STOP </font></h1></button></td>
+
+<br></div></a></td><td></td></tr></table>
+<br>
+<table class="table">
+<tr>
+<td><button onClick="parent.location='/cgi-bin/play.cgi'" ><h1><font color ="#009900"> PLAY </font></h1></button></td>
+<td><button onClick="parent.location='/cgi-bin/next.cgi'"><h2><font color ="#884411"> NEXT! </font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/crop.cgi'"><h2><font color ="#880088"> crop </font></h2></button></td>
+</tr><tr>
+<td><button onClick="parent.location='/cgi-bin/stopsoon.cgi'"><h2><font color ="#EE9922">stop...soon</font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/cdprev.cgi'"><h2><font color ="#3CF">choh it back</font></h2></button></td>
+
+<td></td>
+<td><a href=/../cgi-bin/update%20another.cgi>another update</a></td>
+</tr>
+<!--<td><a href=/../cgi-bin/freshfifteen.cgi>The Freshest Fifteen</a></td>
+<td><a href=/../cgi-bin/freshfolder.cgi>Just One</a></td>
+-->
+</table>
+<!--<iframe src="/cgi-bin/mpcqueue.cgi"style="border:3px solid green; margin-left:800px; margin-top:-1100px;padding:3px;border-radius:11px;width:423px;height:640px;"></iframe>
+-->
+<br>
+
+<iframe src="/cgi-bin/mpcqueue.cgi" style="margin-left:600px;margin-top:-700px;width:909px;height:2000px;">
+
+
+</body>

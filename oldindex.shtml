@@ -1,0 +1,101 @@
+<!DOCTYPE shtml><head><title>music!</title>
+<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+<style>
+.table {
+border-radius: 69px;
+padding: 3px; 
+width:700px; 
+height:420px; 
+border:5px solid; 
+font-size:27px;
+font-weight:bold;
+margin-left:14px;
+margin-top:-14px;
+}
+button {
+border-radius: 11px;
+margin-top:11px;
+margin-left:11px;
+border-width:11px;
+}
+th {
+text-align: center;
+}
+h4 {
+padding:23px;
+line-height:36px;
+font-size:18px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="jquery.fastLiveFilter.js"></script>
+<script>
+    $(function() {
+        $('#search_input').fastLiveFilter('#musiclist');
+    });
+</script>
+
+</head>
+
+<body>
+<br>
+<br>
+<table>
+<tr><td>
+<a href="/cgi-bin/flacstreamer.cgi">
+<div style="border:5px solid;border-width:5px;border-radius:23px;width:555px;">
+<br>
+<font style="padding:23px;font-size:42px;"color="#44CCBB">FLACSTREAM</font>
+<br>
+<br>
+<br>
+</div></a></td>
+<td></td>
+</tr>
+</table>
+
+<br>
+<br>
+Listen in Low Quality: <audio style="height:55px;width:123px; border-radius:5px;"autoplay="autoplay" controls>
+<source src="http://98.248.174.243:8000/mpd" type="audio/mpeg"></audio>
+</h3>
+<a href="/cgi-bin/mpdpion.cgi">Click to enable the Streaming Output</a>
+<h2 style="margin-left:555px;margin-top:-69px;">
+<FORM ACTION="/cgi-bin/addvalue.cgi">
+<P>ENTER URL : <INPUT NAME="value">&nbsp;<INPUT TYPE="SUBMIT" VALUE="feed">
+</FORM>
+</h2>
+<br>
+<table class="table">
+<tr>
+<td><button onClick="parent.location='/cgi-bin/play.cgi'" ><h2><font color ="#009900"> PLAY </font></h2></button></td>
+<td><button style="height:200px;" onClick="parent.location='/cgi-bin/mpcstop.cgi'"><h1 style="font-size:55px;"><font color="#FF0000">STOP</font></h1></button></td>
+
+<td><button onClick="parent.location='/cgi-bin/next.cgi'"><h2><font color ="#884411"> NEXT! </font></h2></button></td>
+</tr><tr>
+<td><button onClick="parent.location='/cgi-bin/crop.cgi'"><h2><font color ="#880088"> crop </font></h2></button></td>
+
+<td><button onClick="parent.location='/cgi-bin/stopsoon.cgi'"><h2><font color ="#EE9922">stop...soon</font></h2></button></td>
+<td><button onClick="parent.location='/cgi-bin/cdprev.cgi'"><h2><font color ="#3CF">choh it back</font></h2></button></td>
+</tr>
+
+<tr>
+<td></td>
+<td><a href=/../cgi-bin/mpc%20hella.cgi>full status</a></td>
+<td><a href=/../cgi-bin/update%20another.cgi>another update</a></td>
+</tr>
+<!--<td><a href=/../cgi-bin/freshfifteen.cgi>The Freshest Fifteen</a></td>
+<td><a href=/../cgi-bin/freshfolder.cgi>Just One</a></td>
+-->
+</table>
+<br><iframe src="/cgi-bin/nowplaying.cgi"style="border:3px solid green; margin:14px;padding:3px;border-radius:11px;width:700px;">nowplayinginfo</iframe><br>
+<iframe src="/cgi-bin/mpcqueue.cgi"style="border:3px solid green; margin-left:777px; margin-top:-640px;padding:3px;border-radius:11px;width:423px;height:640px;"></iframe>
+<br>
+
+<hr>
+<h3>Some Music, freshest first:</h3>
+<input id="search_input" placeholder="Live filter (empty to reset)">
+<!--#include virtual="/cgi-bin/freshamusic.cgi" --> 
+
+
+</body>
